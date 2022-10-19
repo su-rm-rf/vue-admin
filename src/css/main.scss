@@ -1,0 +1,12 @@
+@import './reset.scss';
+
+.nav-header {
+  display: flex;
+  justify-content: space-around;
+}
+.content-body {
+  #chart {
+    width: 500px;
+    height: 300px;
+  }
+}
