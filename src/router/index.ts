@@ -1,8 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from '../views/Home.vue'
-import About from '../views/About.vue'
-import Product from '../views/Product.vue'
+import Element from '../views/Element.vue'
+import ECharts from '../views/ECharts.vue'
+import BigScreen from '../views/BigScreen.vue'
+import Three from '../views/Three.vue'
+import NotFound from '../views/NotFound.vue'
 
 const routes = [
   {
@@ -10,13 +13,27 @@ const routes = [
     component: Home,
   },
   {
-    path: '/about',
-    component: About
+    path: '/element',
+    component: Element
   },
   {
-    path: '/product',
-    component: Product
+    path: '/eCharts',
+    component: ECharts,
+    children: [
+    ]
   },
+  {
+    path: '/bigscreen',
+    component: BigScreen,
+  },
+  {
+    path: '/threejs',
+    component: Three
+  },
+  {
+    path: '/:pathMatch(.*)',
+    component: NotFound
+  }
 ]
 
 const router = createRouter({

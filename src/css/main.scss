@@ -3,10 +3,11 @@
 .nav-header {
   display: flex;
   justify-content: space-around;
+  line-height: 40px;
 }
 .content-body {
-  #chart {
-    width: 500px;
+  #chart, #chart2, #chart3, #chart4 {
+    // width: 500px;
     height: 300px;
   }
 }

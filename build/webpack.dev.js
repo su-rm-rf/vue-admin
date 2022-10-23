@@ -4,7 +4,7 @@ const { merge } = require('webpack-merge')
 module.exports = env => {
   const dev_config = {
     mode: 'development',
-    devtool: 'source-map',
+    // devtool: 'source-map',
     devServer: {
       historyApiFallback: true,
       port: 8319,

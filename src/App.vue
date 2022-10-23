@@ -4,8 +4,10 @@
 <template>
   <nav class="nav-header">
     <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/product">Product</RouterLink>
-    <RouterLink to="/about">About</RouterLink>
+    <RouterLink to="/element">Element</RouterLink>
+    <RouterLink to="/eCharts">ECharts</RouterLink>
+    <RouterLink to="/threejs">Threejs</RouterLink>
+    <RouterLink to="/bigscreen">BigScreen</RouterLink>
   </nav>
   <div class="content-body">
     <RouterView />

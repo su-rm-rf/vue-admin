@@ -1,4 +1,6 @@
 const path = require('path')
+const webpack = require('webpack')
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 
@@ -8,6 +10,7 @@ module.exports = env => {
     output: {
       path: path.resolve(__dirname, '../dist'),
       filename: '[name].js',
+      publicPath: '/'
     },
     module: {
       rules: [
@@ -32,10 +35,10 @@ module.exports = env => {
             'sass-loader',
           ]
         },
-        // {
-        //   test: /\.css$/,
-        //   use: ['style-loader', 'css-loader'],
-        // }
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader'],
+        }
       ]
     },
     resolve: {
@@ -47,6 +50,10 @@ module.exports = env => {
         template: path.resolve(__dirname, '../public/index.html'),
         title: 'vue-admin'
       }),
+      new webpack.DefinePlugin({
+        __VUE_OPTIONS_API__: true,
+        __VUE_PROD_DEVTOOLS__: false,
+      })
     ]
   }
 }

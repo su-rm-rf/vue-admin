@@ -12,5 +12,6 @@
 <template>
   <div>
     home {{ count }}
+    <button @click="increment">增加</button>
   </div>
 </template>
